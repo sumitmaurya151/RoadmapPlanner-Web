@@ -4,6 +4,7 @@ import {
      DesktopOutlined,
      FileOutlined,
      HomeOutlined,
+     NumberOutlined,
      PieChartOutlined,
      SearchOutlined,
      UserOutlined,
@@ -12,10 +13,11 @@ import { useState } from "react";
 import { Layout, Menu } from 'antd';
 const {Sider} = Layout
 const items = [
-     getItem("Home", "1", <HomeOutlined />),
-     getItem("Explore", "2", <SearchOutlined />),
-     getItem("Saved", "sub1", <BookOutlined />),
-     getItem("Profile", "sub2", <UserOutlined />),
+     getItem("Home", "home", <HomeOutlined />),
+     getItem("Explore", "explore", <SearchOutlined />),
+     getItem("Subscription", "subscription", <NumberOutlined />),
+     getItem("Saved", "saved", <BookOutlined />),
+     getItem("Profile", "profile", <UserOutlined />),
 ];
 
 function getItem(label, key, icon, children) {
