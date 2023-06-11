@@ -1,0 +1,17 @@
+.header{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.head_text{
+     font-size: 16px;
+     font-weight: 550;
+}
+.header_row{
+     width: 100%;
+}
+.close_button{
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+}
