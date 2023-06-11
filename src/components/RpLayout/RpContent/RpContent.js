@@ -4,7 +4,7 @@ import RoadmapCards from '@roadmap-planner/components/RoadmapCards/RoadmapCards'
 const {Content} = Layout
 
 
-function RpContent() {
+function RpContent({children}) {
      return (
           <Content
                style={{
@@ -24,13 +24,7 @@ function RpContent() {
                          width:'100%'
                     }}
                >
-                    <Row>
-                    {
-                         [...Array(12)].map((e, i) =>{
-                              return <RoadmapCards key={i}/>
-                         })
-                    }
-                    </Row>
+                    {children}
                </div>
           </Content>
      )

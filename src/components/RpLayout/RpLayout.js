@@ -7,7 +7,7 @@ import RpSlider from './RpSlider/RpSlider'
 
 const {Content} = Layout;
 
-function RpLayout() {
+function RpLayout({children}) {
      return (
           <Layout
                style={{
@@ -19,7 +19,9 @@ function RpLayout() {
                <RpSlider/>
                <Layout>
                     <RpHeader/>
-                    <RpContent/>
+                    <RpContent>
+                         {children}
+                    </RpContent>
                     {/* <RpFooter/> */}
                </Layout>
           </Layout>
