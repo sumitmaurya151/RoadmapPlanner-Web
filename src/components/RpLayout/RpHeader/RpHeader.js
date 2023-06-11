@@ -1,4 +1,6 @@
-import { Layout} from 'antd';
+import LoginButton from '@roadmap-planner/components/LoginButton/LoginButton';
+import { Button, Col, Layout, Row} from 'antd';
+import styles from './RpHeader.module.scss'
 const {Header} = Layout
 
 const RpHeader = () => {
@@ -18,7 +20,14 @@ const RpHeader = () => {
                     fontWeight:'700'
                }}   
           >
-               Roadmap Planner
+               <Row className={styles.display_row}>
+                    <Col span={18} className={styles.logo}>
+                         Roadmap Planner
+                    </Col>
+                    <Col span={6} className={styles.login}>
+                         <LoginButton/>
+                    </Col>
+               </Row>
           </Header>
      );
 };

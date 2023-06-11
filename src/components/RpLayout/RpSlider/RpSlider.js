@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import { Layout, Menu } from 'antd';
 const {Sider} = Layout
+
 const items = [
      getItem("Home", "home", <HomeOutlined />),
      getItem("Explore", "explore", <SearchOutlined />),
@@ -46,7 +47,7 @@ function RpSlider() {
                <div className="demo-logo-vertical" />
                <Menu
                     theme="light"
-                    defaultSelectedKeys={["1"]}
+                    defaultSelectedKeys={["home"]}
                     mode="inline"
                     items={items}
                     style={{
