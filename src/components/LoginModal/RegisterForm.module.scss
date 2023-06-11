@@ -1,0 +1,20 @@
+.form{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin: 30px auto 0px;
+}
+.input{
+     height: 45px;
+     width: 250px;
+}
+.button{
+     margin-bottom: 15px;
+}
+.footer_text{
+     font-size: 15px;
+}
+.register{
+     font-weight: 550;
+}
