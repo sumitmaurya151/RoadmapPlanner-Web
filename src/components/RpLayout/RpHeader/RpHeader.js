@@ -2,8 +2,11 @@ import LoginButton from '@roadmap-planner/components/LoginButton/LoginButton';
 import { Button, Col, Layout, Row} from 'antd';
 import styles from './RpHeader.module.scss'
 const {Header} = Layout
+import { useSelector } from 'react-redux'
+import LoggedInUser from '@roadmap-planner/components/LoggedInUser/LoggedInUser';
 
 const RpHeader = () => {
+     const user = useSelector((state)=>state.user)
      return (
           <Header
                theme="light"
@@ -25,7 +28,12 @@ const RpHeader = () => {
                          Roadmap Planner
                     </Col>
                     <Col span={6} className={styles.login}>
-                         <LoginButton/>
+                         {
+                              user && user.isUserLoggedIn?
+                                   <LoggedInUser/>
+                              :
+                                   <LoginButton/>
+                         }
                     </Col>
                </Row>
           </Header>
