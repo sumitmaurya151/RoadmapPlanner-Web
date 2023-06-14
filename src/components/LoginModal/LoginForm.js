@@ -2,10 +2,14 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Typography } from 'antd'
 import React from 'react'
 import styles from './LoginForm.module.scss'
+import { useDispatch } from 'react-redux'
+import { setUserLoggedIn } from '@roadmap-planner/redux/slice/userSlice';
 
 function LoginForm({showRegisterForm}) {
+     const dispatch = useDispatch();
      const onFinish = (values) => {
           console.log('Received values of form: ', values);
+          dispatch(setUserLoggedIn())
      };
      return (
           <Form
