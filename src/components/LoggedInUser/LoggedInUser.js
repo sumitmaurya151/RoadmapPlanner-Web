@@ -1,5 +1,5 @@
 import { UserOutlined } from '@ant-design/icons'
-import { setUserLoggedOut } from '@roadmap-planner/redux/slice/userSlice'
+import { setUserLoggedOut } from '@roadmap-planner/redux/slice/UserSlice'
 import { Avatar, Dropdown } from 'antd'
 import Link from 'next/link'
 import React from 'react'

@@ -1,16 +1,26 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Typography } from 'antd'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './LoginForm.module.scss'
 import { useDispatch } from 'react-redux'
-import { setUserLoggedIn } from '@roadmap-planner/redux/slice/userSlice';
+import { setUserLoggedIn } from '@roadmap-planner/redux/slice/UserSlice';
+import { useAuthenticateUserMutation } from '@roadmap-planner/redux/api/UsersApiSlice';
 
 function LoginForm({showRegisterForm}) {
+
      const dispatch = useDispatch();
+     const [authenticateUser,authenticateUserResult] = useAuthenticateUserMutation();
+
      const onFinish = (values) => {
           console.log('Received values of form: ', values);
           dispatch(setUserLoggedIn())
+          authenticateUser()
      };
+
+     useEffect(()=>{
+          console.log(authenticateUserResult)
+     },[authenticateUserResult])
+
      return (
           <Form
                name="normal_login"
